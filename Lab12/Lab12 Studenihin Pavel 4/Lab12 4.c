@@ -1,15 +1,15 @@
 #include <stdio.h>
-#include <locale.h> // Подключаем для русского языка
+#include <locale.h> 
 
 int main() {
     setlocale(LC_ALL, "Russian");
     float array[10] = { 1.1, 2.2, 3.3, 4.4, 5.5, 6.6, 7.7, 8.8, 9.9, 10.0 };
     float* ptr_a;
     printf("===4.1==\n");
-    printf("имя массива: %p\n", (void*)array);
-    printf("адресс первого элемента: %p\n", (void*)&array[0]);
-    printf("адресс второго элемента: %p\n", (void*)&array[1]);
-    printf("адресс всего массива: %p\n", (void*)&array);
+    printf("ГЁГ¬Гї Г¬Г Г±Г±ГЁГўГ : %p\n", (void*)array);
+    printf("Г Г¤Г°ГҐГ±Г± ГЇГҐГ°ГўГ®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ : %p\n", (void*)&array[0]);
+    printf("Г Г¤Г°ГҐГ±Г± ГўГІГ®Г°Г®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ : %p\n", (void*)&array[1]);
+    printf("Г Г¤Г°ГҐГ±Г± ГўГ±ГҐГЈГ® Г¬Г Г±Г±ГЁГўГ : %p\n", (void*)&array);
     printf("===4.2==\n");
     ptr_a = array;
     printf("ptr_a = %p, *ptr_a = %.1f \n", (void*)ptr_a, *ptr_a);
@@ -20,13 +20,13 @@ int main() {
     printf("===4.3==\n");
     for (int i = 0; i <= 10; i+=2)
     {
-        printf("array[%d] = %.1f, адресс: %p\n", i, *(ptr_a + i), (void*)(ptr_a + i));
+        printf("array[%d] = %.1f, Г Г¤Г°ГҐГ±Г±: %p\n", i, *(ptr_a + i), (void*)(ptr_a + i));
     }
     printf("===4.4==\n");
     ptr_a = &array[9];
     for (int i = 0; i < 10; i++)
     {
-        printf("Элемент: %.1f, адресс: %p\n", *ptr_a, (void*)ptr_a);
+        printf("ГќГ«ГҐГ¬ГҐГ­ГІ: %.1f, Г Г¤Г°ГҐГ±Г±: %p\n", *ptr_a, (void*)ptr_a);
         ptr_a--;
     }
         system("pause");
